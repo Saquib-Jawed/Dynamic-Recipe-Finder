@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// function RecipeBody() {
-//   return (
-//     <div>RecipeBody</div>
-//   )
-// }
-
-// export default RecipeBody
-
-
 import React, { Component } from "react";
 import Axios from "axios";
 import "../Styling/RecipeBody.css";
@@ -79,6 +68,7 @@ class RecipeBody extends Component {
         <div className="recipeContainer">
           <h1 className="title">{meal[0].strMeal}</h1>
           <img className="img" src={meal[0].strMealThumb} alt={"Your meal for " + meal[0].strMeal}/>
+          <br/>
           <div className="category">
             <p>
               <em>Category of Meal :</em> {meal[0].strCategory}{" "}
@@ -89,7 +79,7 @@ class RecipeBody extends Component {
             </div>
             <a href={meal[0].strYoutube} target="_blank" rel="noreferrer"><button className="button">Recipe Video</button></a>
             <h3 className="recipes-header">Recipes</h3>
-            <div className="recipe">{list}{<br/>}{<br/>}{meal[0].strInstructions}</div>
+            <div className="recipe scroller">{list}{<br/>}{<br/>}{meal[0].strInstructions}</div>
         </div>
     ) : (
       <div className="noData">No Data has been recieved</div>

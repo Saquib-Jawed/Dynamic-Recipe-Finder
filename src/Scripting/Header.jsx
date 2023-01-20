@@ -1,14 +1,3 @@
-// import React from 'react'
-
-// function Header() {
-//   return (
-//     <div>Header</div>
-//   )
-// }
-
-// export default Header
-
-
 import React, { Component } from "react";
 import "../Styling/Header.css";
 import RecipeBody from "./RecipeBody";
@@ -55,11 +44,9 @@ class HeaderForm extends Component {
         {this.state.searched ? (
           <RecipeBody foodItem={this.state.foodItem} />
         ) : (
-          <div className="center">
-            <h2>
+            <h2 className="center">
               Type a Dish Name to search for its ingredients
             </h2>
-          </div>
         )}
       </div>
     );
